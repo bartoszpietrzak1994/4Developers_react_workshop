@@ -6,15 +6,11 @@ class TweetsList extends React.Component {
       console.log(nextProps);
   }
 
-  componentDidMount() {
-    
-  }
-
   render() {
     return (
       <div>
         <h2>{this.props.title}</h2>
-        <ul>{this.props.tweetsList.map(t => <li>{t}</li>)}</ul>
+        <ul>{this.props.tweetsList.map(t => <li key={t.uuid}>{t.title}</li>)}</ul>
       </div>
     )
   }
